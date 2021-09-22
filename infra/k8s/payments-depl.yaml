@@ -14,8 +14,8 @@ spec:
     spec: 
       containers: 
         - name: payments
-          image: us.gcr.io/ticketing-dev-316608/payments
-          # image: tanay1111/payments
+          # image: us.gcr.io/ticketing-dev-316608/payments
+          image: tanay1111/payments
           env: 
             - name: MONGO_URI
               value: 'mongodb://payments-mongo-srv:27017/payments'

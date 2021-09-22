@@ -14,8 +14,8 @@ spec:
     spec: 
       containers: 
         - name: orders
-          image: us.gcr.io/ticketing-dev-316608/orders
-          # image: tanay1111/orders
+          # image: us.gcr.io/ticketing-dev-316608/orders
+          image: tanay1111/orders
           env: 
             - name: MONGO_URI
               value: 'mongodb://orders-mongo-srv:27017/orders'
