@@ -4,6 +4,8 @@ import { app } from './app';
 const PORT = 3000;
 
 (async () => {
+    console.log("starting up...");
+
     // check if JWT_KEY evnironment variable exists 
     if (!process.env.JWT_KEY) {
         throw new Error("JWT_KEY must be defined");
