@@ -1,0 +1,59 @@
+POST http://ticketing.dev/api/users/signup/
+Content-Type: application/json
+
+{
+   "email": "test@test.com",
+   "password":"password" 
+}
+
+###
+GET http://ticketing.dev/api/tickets
+
+###
+GET https://ticketing.dev/api/users/currentuser
+
+### 
+POST https://ticketing.dev/api/users/signin
+Content-Type: application/json
+
+{
+   "email": "test@test.com",
+   "password": "password"
+}
+
+###
+
+POST https://ticketing.dev/api/tickets
+Content-Type: application/json
+Cookie: express:sess=eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJall4TkRjM1pqZzNZV1l4TW1FMU1EQXhPV0prTTJKaU9DSXNJbVZ0WVdsc0lqb2lkR1Z6ZEVCMFpYTjBMbU52YlNJc0ltbGhkQ0k2TVRZek1qQTNOVFk0TkgwLnJWYWlGdkJpWlVzYVZoaXN6NDFtbU16TnNsLUp6YVpEQWtsYUFqSFAyWUEifQ==; path=/; secure; httponly
+
+{
+   "title": "Concert ticket",
+   "price": 400
+}
+
+### 
+PUT https://ticketing.dev/api/tickets/611ea395f2863c00194a954c
+Content-Type: application/json
+
+{
+   "price": 10,
+   "title": "Movie ticket 123"
+}
+
+###
+POST https://ticketing.dev/api/orders
+Content-Type: application/json
+
+{
+   "ticketId": "61477fb0e1a4970019867583"
+}
+
+###
+POST https://ticketing.dev/api/payments
+Content-Type: application/json
+
+{
+   "token": "tok_visa",
+   "orderId": "61477fc38c45760019e1614a"
+}
