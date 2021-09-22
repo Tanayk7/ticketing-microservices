@@ -7,6 +7,8 @@ import { OrderCreatedListener } from './events/listeners/order-created-listener'
 const PORT = 3000;
 
 (async () => {
+    console.log("Starting...");
+
     // check if JWT_KEY evnironment variable exists 
     if (!process.env.JWT_KEY) {
         throw new Error("JWT_KEY must be defined");
