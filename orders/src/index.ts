@@ -9,6 +9,8 @@ import { PaymentCreatedListener } from './events/listeners/payment-created-liste
 const PORT = 3000;
 
 (async () => {
+    console.log('starting...');
+
     // check if JWT_KEY evnironment variable exists 
     if (!process.env.JWT_KEY) {
         throw new Error("JWT_KEY must be defined");
